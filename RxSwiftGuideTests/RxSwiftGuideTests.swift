@@ -2,7 +2,7 @@
 //  RxSwiftGuideTests.swift
 //  RxSwiftGuideTests
 //
-//  Created by 李一平 on 2018/6/19.
+//  Created by qingfengiOS on 2018/6/19.
 //  Copyright © 2018年 qingfengiOS. All rights reserved.
 //
 

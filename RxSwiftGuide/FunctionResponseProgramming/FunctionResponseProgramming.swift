@@ -2,7 +2,7 @@
 //  FunctionResponseProgramming.swift
 //  RxSwiftGuide
 //
-//  Created by 李一平 on 2018/6/20.
+//  Created by qingfengiOS on 2018/6/20.
 //  Copyright © 2018年 qingfengiOS. All rights reserved.
 //
 
@@ -12,12 +12,18 @@ import RxCocoa
 
 class FunctionResponseProgramming: UIViewController {
 
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
 
         normalAlert()
+        
+        rxAlert()
     }
+    
+    
     
     func normalAlert() {
         // 按钮点击序列
@@ -31,6 +37,19 @@ class FunctionResponseProgramming: UIViewController {
          */
     }
 
+    func rxAlert() {
+        let button: UIButton = UIButton(type: UIButtonType.custom)
+        button.bounds = CGRect(x: 0, y:0, width: 100, height: 50)
+        button.center = self.view.center
+        button.backgroundColor = UIColor.red
+        button.setTitle("rxAlert", for: UIControlState.normal)
+        self.view .addSubview(button)
+        
+        let taps: Observable<Void> = button.rx.tap.asObservable()
+        taps.subscribe(onNext: { self.showAlert() }).disposed(by: disposeBag)
+        
+    }
+    
     func showAlert() {
         print("show alert")
         let alert: UIAlertController = UIAlertController(title: "alert", message: "message", preferredStyle: UIAlertControllerStyle.alert)

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  RxSwiftGuide
 //
-//  Created by 李一平 on 2018/6/19.
+//  Created by qingfengiOS on 2018/6/19.
 //  Copyright © 2018年 qingfengiOS. All rights reserved.
 //
 
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         dataArray = ["SimpleValidation",
                      "FunctionalProgramming",
                      "FunctionResponseProgramming",
+                     "DataBind",
                     ]
         self.tableView.tableFooterView = UIView()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)

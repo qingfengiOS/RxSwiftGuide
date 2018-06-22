@@ -78,5 +78,31 @@ class SimpleValidation: UIViewController {
         alertView.show()
     }
     
+    //Rx分解
+    func justLearn() {
+        // Observable<String>
+        let text = usernameOutlet.rx.text.orEmpty.asObservable()
+        
+        // Observable<Bool>
+        let passwordValid = text
+        
+        // Operator
+        .map { $0.count >= minimalPasswordLength }
+        
+        // Observer<Bool>
+        let observer = passwordValidOutlet.rx.isHidden
+        
+        // Disposable
+        let disposeable = passwordValid.subscribeOn(MainScheduler.instance)
+                                        .observeOn(MainScheduler.instance)
+                                        .bind(to: observer)
+        
+        // 取消绑定，你可以在退出页面时取消绑定
+        disposeable.dispose()
+        
+        
+        
+    }
+    
 
 }

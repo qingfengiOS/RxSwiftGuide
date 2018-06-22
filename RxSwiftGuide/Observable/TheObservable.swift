@@ -63,7 +63,7 @@ class TheObservable: UIViewController {
     func observerJson() {
         let json: Observable<JSON> = Observable.create { (observer) -> Disposable in
             
-            let url: URL = NSURL.init(string: "https://facebook.github.io/react-native/movies.json")! as URL
+            let url: URL = URL.init(string: "https://facebook.github.io/react-native/movies.json")!
             
             let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 

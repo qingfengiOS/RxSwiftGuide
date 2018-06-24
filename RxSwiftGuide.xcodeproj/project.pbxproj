@@ -10,6 +10,7 @@
 		064432BC0CB561CC91ACE092 /* Pods_RxSwiftGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D219C5BF5E7E155F6C73E171 /* Pods_RxSwiftGuide.framework */; };
 		1893DB8E411A8B4A7249056C /* Pods_RxSwiftGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FE006CD7A3FCCFBB88463 /* Pods_RxSwiftGuideTests.framework */; };
 		9689BFE54834E6216DA80D59 /* Pods_RxSwiftGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFED3989141FAF9C8DED78D /* Pods_RxSwiftGuideUITests.framework */; };
+		FD07B05220DFD3F40075E16B /* SpecialObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07B05120DFD3F40075E16B /* SpecialObservable.swift */; };
 		FD0FC23C20DCF4D2009FC61A /* TheObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0FC23B20DCF4D2009FC61A /* TheObservable.swift */; };
 		FD7F778520DBA33900E2B2CA /* DataBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F778320DBA33900E2B2CA /* DataBind.swift */; };
 		FD7F778620DBA33900E2B2CA /* DataBind.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7F778420DBA33900E2B2CA /* DataBind.xib */; };
@@ -54,6 +55,7 @@
 		ACC6926E8E346DA7E1684390 /* Pods-RxSwiftGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftGuideTests/Pods-RxSwiftGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9FDDD4759865DA241054FF4 /* Pods-RxSwiftGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftGuide/Pods-RxSwiftGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		D219C5BF5E7E155F6C73E171 /* Pods_RxSwiftGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD07B05120DFD3F40075E16B /* SpecialObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialObservable.swift; sourceTree = "<group>"; };
 		FD0FC23B20DCF4D2009FC61A /* TheObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheObservable.swift; sourceTree = "<group>"; };
 		FD7F778320DBA33900E2B2CA /* DataBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBind.swift; sourceTree = "<group>"; };
 		FD7F778420DBA33900E2B2CA /* DataBind.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataBind.xib; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD07B05020DFD3E00075E16B /* SpecialObservable */ = {
+			isa = PBXGroup;
+			children = (
+				FD07B05120DFD3F40075E16B /* SpecialObservable.swift */,
+			);
+			path = SpecialObservable;
+			sourceTree = "<group>";
+		};
 		FD0FC23820DCF284009FC61A /* Observable */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		FD8885BD20D9093B00276455 /* RxSwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				FD07B05020DFD3E00075E16B /* SpecialObservable */,
 				FD0FC23820DCF284009FC61A /* Observable */,
 				FD7F778020DBA2ED00E2B2CA /* DataBind */,
 				FDF37D2D20DA3DB400C5F05E /* SimpleValidation */,
@@ -444,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF37D3020DA3DD000C5F05E /* SimpleValidation.swift in Sources */,
+				FD07B05220DFD3F40075E16B /* SpecialObservable.swift in Sources */,
 				FDF37D2820DA234700C5F05E /* FunctionalProgramming.swift in Sources */,
 				FD8885C120D9093B00276455 /* ViewController.swift in Sources */,
 				FDF37D2620DA233D00C5F05E /* Student.swift in Sources */,

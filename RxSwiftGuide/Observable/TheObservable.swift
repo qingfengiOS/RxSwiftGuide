@@ -100,15 +100,23 @@ class TheObservable: UIViewController {
         }, onCompleted: {
             print("请求完成")
         }).disposed(by: disposeBag)
-        
+    
         /*
          这里subscribe后面的onNext,onError, onCompleted 分别响应我们创建 json 时，构建函数里面的onNext,onError, onCompleted 事件。我们称这些事件为 Event
          */
-        
-        
     }
-    
-    
-    
 }
+
+public enum Event<Element> {
+    case next(Element)
+    case error(Swift.Error)
+    case complete
+}
+/*
+ 1、next - 序列产生了一个新的元素
+ 2、error - 创建序列时产生了一个错误，导致整个序列终止
+ 3、complete - 序列的所有元素都已经成功生产，整个序列完成
+ */
+
+
 

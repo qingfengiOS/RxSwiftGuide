@@ -34,6 +34,27 @@ class SpecialObservable: UIViewController {
         })
             .disposed(by: disposeBag)
         
+        
+        cacheLocally()
+            .subscribe(onCompleted: {
+                print("Completed with no error")
+            }, onError: { error in
+                print("Completed with an error: \(error)")
+            })
+            .disposed(by: disposeBag)
+        
+        
+        generateString()
+            .subscribe(onSuccess: { element in
+                print("Completed with element: \(element)")
+                
+            },onError: { error in
+                print("Completed with an error: \(error)")
+            },onCompleted: {
+                print("Completed with no error")
+            })
+            .disposed(by: disposeBag)
+        
     }
     
     //MARK:-Single
@@ -73,10 +94,72 @@ class SpecialObservable: UIViewController {
                 task.cancel()
             }
         }
+        /*
+         sucess - 产生一个单独的元素
+         error - 产生一个错误
+         
+         同样可以对 Observable 调用 .asSingle() 方法，将它转换为 Single。
+         */
     }
+    
+    
+    //MARK:-Completable
     /*
-     同样可以对 Observable 调用 .asSingle() 方法，将它转换为 Single。
+     Completable是Observable的另外一个版本。不像Observable可以发出多个元素，它要么只能产生一个completed事件，要么产生一个error事件。
+     
+     1、发出0个元素
+     2、发出一个completed事件或者一个error事件
+     3、不会共享状态的变化
+     
+     Completable 适用于那种你只关心任务是否完成，而不需要在意任务返回值的情况。它和 Observable<Void> 有点相似。
      */
+    func cacheLocally() -> Completable {
+        return Completable.create { completable in
+            //存储一些本地数据
+            /* .... */
+            
+//            guard success else {
+//                completable(.error(cacheError.failedCaching))
+//                return Disposables.create {}
+//            }
+            
+            completable(.completed)
+            return Disposables.create {}
+            
+        }
+        /*
+         completed - 产生完成事件
+         error - 产生一个错误
+         */
+    }
+    
+    
+    //MARK:-Maybe
+    /*
+     Maybe 是 Observable 的另外一个版本。它介于 Single 和 Completable 之间，它要么只能发出一个元素，要么产生一个 completed 事件，要么产生一个 error 事件。
+     
+     发出一个元素或者一个 completed 事件或者一个 error 事件
+     不会共享状态变化
+     如果你遇到那种可能需要发出一个元素，又可能不需要发出时，就可以使用 Maybe。
+     */
+    func generateString() -> Maybe<String> {
+        return Maybe<String>.create { maybe in
+            maybe(.success("RxSwift"))
+            
+            //OR
+            
+            maybe(.completed)
+            
+            //OR
+//            maybe(.error(error))
+            
+            return Disposables.create {}
+        }
+        /*
+         同样可以对 Observable 调用 .asMaybe() 方法，将它转换为 Maybe。
+         */
+    }
+    
     
 }
 

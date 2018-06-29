@@ -21,6 +21,8 @@
 		FD8885C920D9093C00276455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8885C720D9093C00276455 /* LaunchScreen.storyboard */; };
 		FD8885D420D9093C00276455 /* RxSwiftGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8885D320D9093C00276455 /* RxSwiftGuideTests.swift */; };
 		FD8885DF20D9093C00276455 /* RxSwiftGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8885DE20D9093C00276455 /* RxSwiftGuideUITests.swift */; };
+		FD9A464320E3216500C6454A /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A464220E3216500C6454A /* Driver.swift */; };
+		FDAECC1D20E63501008E03EE /* TheObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAECC1C20E63501008E03EE /* TheObserver.swift */; };
 		FDF37D2620DA233D00C5F05E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF37D2520DA233D00C5F05E /* Student.swift */; };
 		FDF37D2820DA234700C5F05E /* FunctionalProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF37D2720DA234700C5F05E /* FunctionalProgramming.swift */; };
 		FDF37D2B20DA25F600C5F05E /* FunctionResponseProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF37D2A20DA25F600C5F05E /* FunctionResponseProgramming.swift */; };
@@ -72,6 +74,8 @@
 		FD8885DA20D9093C00276455 /* RxSwiftGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8885DE20D9093C00276455 /* RxSwiftGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftGuideUITests.swift; sourceTree = "<group>"; };
 		FD8885E020D9093C00276455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9A464220E3216500C6454A /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		FDAECC1C20E63501008E03EE /* TheObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheObserver.swift; sourceTree = "<group>"; };
 		FDF37D2520DA233D00C5F05E /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		FDF37D2720DA234700C5F05E /* FunctionalProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalProgramming.swift; sourceTree = "<group>"; };
 		FDF37D2A20DA25F600C5F05E /* FunctionResponseProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionResponseProgramming.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 		FD8885BD20D9093B00276455 /* RxSwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				FDAECC1B20E634F3008E03EE /* Observer */,
+				FD9A464120E3214B00C6454A /* Driver */,
 				FD07B05020DFD3E00075E16B /* SpecialObservable */,
 				FD0FC23820DCF284009FC61A /* Observable */,
 				FD7F778020DBA2ED00E2B2CA /* DataBind */,
@@ -212,6 +218,22 @@
 				FD8885E020D9093C00276455 /* Info.plist */,
 			);
 			path = RxSwiftGuideUITests;
+			sourceTree = "<group>";
+		};
+		FD9A464120E3214B00C6454A /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A464220E3216500C6454A /* Driver.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		FDAECC1B20E634F3008E03EE /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				FDAECC1C20E63501008E03EE /* TheObserver.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 		FDF37D2420DA232900C5F05E /* FunctionalProgramming */ = {
@@ -459,8 +481,10 @@
 				FDF37D2820DA234700C5F05E /* FunctionalProgramming.swift in Sources */,
 				FD8885C120D9093B00276455 /* ViewController.swift in Sources */,
 				FDF37D2620DA233D00C5F05E /* Student.swift in Sources */,
+				FD9A464320E3216500C6454A /* Driver.swift in Sources */,
 				FD0FC23C20DCF4D2009FC61A /* TheObservable.swift in Sources */,
 				FD8885BF20D9093B00276455 /* AppDelegate.swift in Sources */,
+				FDAECC1D20E63501008E03EE /* TheObserver.swift in Sources */,
 				FD7F778520DBA33900E2B2CA /* DataBind.swift in Sources */,
 				FDF37D2B20DA25F600C5F05E /* FunctionResponseProgramming.swift in Sources */,
 			);

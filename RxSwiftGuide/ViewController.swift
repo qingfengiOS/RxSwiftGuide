@@ -23,6 +23,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                      "DataBind",
                      "TheObservable",
                      "SpecialObservable",
+                     "Driver",
+                     "TheObserver",
                     ]
         self.tableView.tableFooterView = UIView()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)

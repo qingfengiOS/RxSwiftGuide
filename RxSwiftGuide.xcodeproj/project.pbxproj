@@ -28,6 +28,9 @@
 		FDF37D2B20DA25F600C5F05E /* FunctionResponseProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF37D2A20DA25F600C5F05E /* FunctionResponseProgramming.swift */; };
 		FDF37D3020DA3DD000C5F05E /* SimpleValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF37D2E20DA3DD000C5F05E /* SimpleValidation.swift */; };
 		FDF37D3120DA3DD000C5F05E /* SimpleValidation.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF37D2F20DA3DD000C5F05E /* SimpleValidation.xib */; };
+		FDFA122020E9FF6A00B99662 /* TheBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA121F20E9FF6A00B99662 /* TheBinder.swift */; };
+		FDFA122220EA032F00B99662 /* TheBinder.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFA122120EA032F00B99662 /* TheBinder.xib */; };
+		FDFA122520EA10D700B99662 /* ObservableAndObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA122420EA10D700B99662 /* ObservableAndObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		FDF37D2A20DA25F600C5F05E /* FunctionResponseProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionResponseProgramming.swift; sourceTree = "<group>"; };
 		FDF37D2E20DA3DD000C5F05E /* SimpleValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidation.swift; sourceTree = "<group>"; };
 		FDF37D2F20DA3DD000C5F05E /* SimpleValidation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleValidation.xib; sourceTree = "<group>"; };
+		FDFA121F20E9FF6A00B99662 /* TheBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBinder.swift; sourceTree = "<group>"; };
+		FDFA122120EA032F00B99662 /* TheBinder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TheBinder.xib; sourceTree = "<group>"; };
+		FDFA122420EA10D700B99662 /* ObservableAndObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAndObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,8 @@
 		FD8885BD20D9093B00276455 /* RxSwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				FDFA122320EA10CA00B99662 /* AsyncSubject */,
+				FDFA121E20E9FF4B00B99662 /* Binder */,
 				FDAECC1B20E634F3008E03EE /* Observer */,
 				FD9A464120E3214B00C6454A /* Driver */,
 				FD07B05020DFD3E00075E16B /* SpecialObservable */,
@@ -260,6 +268,23 @@
 				FDF37D2F20DA3DD000C5F05E /* SimpleValidation.xib */,
 			);
 			path = SimpleValidation;
+			sourceTree = "<group>";
+		};
+		FDFA121E20E9FF4B00B99662 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA121F20E9FF6A00B99662 /* TheBinder.swift */,
+				FDFA122120EA032F00B99662 /* TheBinder.xib */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+		FDFA122320EA10CA00B99662 /* AsyncSubject */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA122420EA10D700B99662 /* ObservableAndObserver.swift */,
+			);
+			path = AsyncSubject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +400,7 @@
 				FDF37D3120DA3DD000C5F05E /* SimpleValidation.xib in Resources */,
 				FD8885C420D9093B00276455 /* Main.storyboard in Resources */,
 				FD7F778620DBA33900E2B2CA /* DataBind.xib in Resources */,
+				FDFA122220EA032F00B99662 /* TheBinder.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,9 +502,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFA122520EA10D700B99662 /* ObservableAndObserver.swift in Sources */,
 				FDF37D3020DA3DD000C5F05E /* SimpleValidation.swift in Sources */,
 				FD07B05220DFD3F40075E16B /* SpecialObservable.swift in Sources */,
 				FDF37D2820DA234700C5F05E /* FunctionalProgramming.swift in Sources */,
+				FDFA122020E9FF6A00B99662 /* TheBinder.swift in Sources */,
 				FD8885C120D9093B00276455 /* ViewController.swift in Sources */,
 				FDF37D2620DA233D00C5F05E /* Student.swift in Sources */,
 				FD9A464320E3216500C6454A /* Driver.swift in Sources */,

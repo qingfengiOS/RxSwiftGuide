@@ -27,6 +27,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                      "TheObserver",
                      "TheBinder",
                      "ObservableAndObserver",
+                     "TheOperator",
+                     "TheDisposable",
                     ]
         self.tableView.tableFooterView = UIView()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)

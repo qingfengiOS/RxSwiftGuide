@@ -21,6 +21,7 @@ class ObservableAndObserver: UIViewController {
         asyncSubject()
         publishSubject()
         replaySubject()
+        behavioerSubject()
     }
 
     //MARK:-AsyncSubject
@@ -93,6 +94,38 @@ class ObservableAndObserver: UIViewController {
          
          如果把 ReplaySubject 当作观察者来使用，注意不要在多个线程调用 onNext, onError 或 onCompleted。这样会导致无序调用，将造成意想不到的结果。
         */
+    }
+    
+    //MARK:-BehavioerSubject
+    func behavioerSubject() {
+        print("-----------------------")
+        let subject = BehaviorSubject(value: "❤️")//默认值
+        
+        subject
+            .subscribe{ print("Subscription: 1 Event", $0) }
+            .disposed(by: disposeBag)
+
+        subject.onNext("🐩")
+        subject.onNext("🐈")
+        
+        subject
+            .subscribe{ print("Subscription: 2 Event", $0) }
+            .disposed(by: disposeBag)
+        
+        subject.onNext("A")
+        subject.onNext("B")
+        
+        subject
+            .subscribe { print("Subscription: 3 Event", $0) }
+            .disposed(by: disposeBag)
+        
+        subject.onNext("🍐")
+        subject.onNext("🍊")
+        /*
+         当观察者对 BehaviorSubject 进行订阅时，它会将源 Observable 中最新的元素发送出来（如果不存在最新的元素，就发出默认元素）。然后将随后产生的元素发送出来。
+         
+         如果源 Observable 因为产生了一个 error 事件而中止， BehaviorSubject 就不会发出任何元素，而是将这个 error 事件发送出来。
+         */
     }
     
     

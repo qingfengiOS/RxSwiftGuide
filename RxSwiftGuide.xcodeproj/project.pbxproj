@@ -12,6 +12,8 @@
 		9689BFE54834E6216DA80D59 /* Pods_RxSwiftGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFED3989141FAF9C8DED78D /* Pods_RxSwiftGuideUITests.framework */; };
 		FD07B05220DFD3F40075E16B /* SpecialObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD07B05120DFD3F40075E16B /* SpecialObservable.swift */; };
 		FD0FC23C20DCF4D2009FC61A /* TheObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0FC23B20DCF4D2009FC61A /* TheObservable.swift */; };
+		FD2C82F320FDC39B000B926D /* TheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C82F220FDC39B000B926D /* TheOperator.swift */; };
+		FD2C82F820FDD052000B926D /* TheDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C82F720FDD052000B926D /* TheDisposable.swift */; };
 		FD7F778520DBA33900E2B2CA /* DataBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F778320DBA33900E2B2CA /* DataBind.swift */; };
 		FD7F778620DBA33900E2B2CA /* DataBind.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7F778420DBA33900E2B2CA /* DataBind.xib */; };
 		FD8885BF20D9093B00276455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8885BE20D9093B00276455 /* AppDelegate.swift */; };
@@ -62,6 +64,8 @@
 		D219C5BF5E7E155F6C73E171 /* Pods_RxSwiftGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD07B05120DFD3F40075E16B /* SpecialObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialObservable.swift; sourceTree = "<group>"; };
 		FD0FC23B20DCF4D2009FC61A /* TheObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheObservable.swift; sourceTree = "<group>"; };
+		FD2C82F220FDC39B000B926D /* TheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOperator.swift; sourceTree = "<group>"; };
+		FD2C82F720FDD052000B926D /* TheDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheDisposable.swift; sourceTree = "<group>"; };
 		FD7F778320DBA33900E2B2CA /* DataBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBind.swift; sourceTree = "<group>"; };
 		FD7F778420DBA33900E2B2CA /* DataBind.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataBind.xib; sourceTree = "<group>"; };
 		FD8885BB20D9093B00276455 /* RxSwiftGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,22 @@
 			path = Observable;
 			sourceTree = "<group>";
 		};
+		FD2C82F120FDC380000B926D /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C82F220FDC39B000B926D /* TheOperator.swift */,
+			);
+			path = Operator;
+			sourceTree = "<group>";
+		};
+		FD2C82F420FDCD80000B926D /* Disposable */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C82F720FDD052000B926D /* TheDisposable.swift */,
+			);
+			path = Disposable;
+			sourceTree = "<group>";
+		};
 		FD7F778020DBA2ED00E2B2CA /* DataBind */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +210,8 @@
 		FD8885BD20D9093B00276455 /* RxSwiftGuide */ = {
 			isa = PBXGroup;
 			children = (
+				FD2C82F420FDCD80000B926D /* Disposable */,
+				FD2C82F120FDC380000B926D /* Operator */,
 				FDFA122320EA10CA00B99662 /* AsyncSubject */,
 				FDFA121E20E9FF4B00B99662 /* Binder */,
 				FDAECC1B20E634F3008E03EE /* Observer */,
@@ -510,11 +532,13 @@
 				FD8885C120D9093B00276455 /* ViewController.swift in Sources */,
 				FDF37D2620DA233D00C5F05E /* Student.swift in Sources */,
 				FD9A464320E3216500C6454A /* Driver.swift in Sources */,
+				FD2C82F820FDD052000B926D /* TheDisposable.swift in Sources */,
 				FD0FC23C20DCF4D2009FC61A /* TheObservable.swift in Sources */,
 				FD8885BF20D9093B00276455 /* AppDelegate.swift in Sources */,
 				FDAECC1D20E63501008E03EE /* TheObserver.swift in Sources */,
 				FD7F778520DBA33900E2B2CA /* DataBind.swift in Sources */,
 				FDF37D2B20DA25F600C5F05E /* FunctionResponseProgramming.swift in Sources */,
+				FD2C82F320FDC39B000B926D /* TheOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

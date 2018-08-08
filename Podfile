@@ -6,6 +6,7 @@ target 'RxSwiftGuide' do
   use_frameworks!
 pod 'RxSwift', '~> 4.0'
 pod 'RxCocoa', '~> 4.0'
+pod 'Moya', '~> 11.0.2'
   # Pods for RxSwiftGuide
 
   target 'RxSwiftGuideTests' do
